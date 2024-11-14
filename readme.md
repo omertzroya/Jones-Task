@@ -43,13 +43,6 @@ project-root/
 - Handles successful submission and navigation
 - Includes error handling and browser cleanup
 
-## Configuration
-
-The script is configured with the following default values:
-- Browser viewport: 1280x800
-- Form URL: https://testsite.getjones.com/ExampleForm/
-- Screenshot path: 'form-before-submit.png'
-- Navigation timeout: 10000ms (10 seconds)
 
 ## Usage
 
@@ -58,24 +51,9 @@ Run the script using Node.js:
 ```bash
 node formAutomation.js
 ```
-
-## Error Handling
-
-The script includes comprehensive error handling:
-- Try/catch block for main automation process
-- Browser cleanup in finally block
-- Navigation timeout handling
-- Submit button detection verification
-
 ## Screenshots
 
 The script saves a screenshot named 'form-before-submit.png' before form submission. This can be useful for debugging or verification purposes.
-
-## Notes
-
-- The script runs in non-headless mode (`headless: false`) to allow visual monitoring of the automation process
-- Make sure to have proper permissions to access the target website
-- The script uses standard Puppeteer practices for waiting for elements and navigation
 
 ## Troubleshooting
 
@@ -86,14 +64,3 @@ If you encounter issues:
 4. Check console output for error messages
 5. Ensure proper network connectivity
 
-## Customization
-
-To modify the form data, update the following values in the script:
-- `page.type('input[name="name"]', 'Your Name')`
-- `page.type('input[name="email"]', 'your.email@example.com')`
-- `page.type('input[name="phone"]', 'your-phone-number')`
-- `page.type('input[name="company"]', 'Your Company')`
-
-## License
-
-This project is available for open use. Please verify compliance with target website's terms of service before deployment.
